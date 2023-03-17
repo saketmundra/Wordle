@@ -44,15 +44,15 @@ function Keyboard() {
     },
     [currAttempt]
   );
-
   useEffect(() => {
     document.addEventListener("keydown", handleKeyboard);
+
     return () => {
       document.removeEventListener("keydown", handleKeyboard);
     };
   }, [handleKeyboard]);
 
-  console.log(disabledLetters);
+  // console.log(disabledLetters);
   return (
     <div className="keyboard" onKeyDown={handleKeyboard}>
       <div className="line1">
